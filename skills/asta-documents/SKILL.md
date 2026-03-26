@@ -1,16 +1,30 @@
 ---
 name: asta-documents
-description: Local document metadata index for scientific documents
+description: >
+  Manage a local research document library using the asta-documents CLI.
+  Add papers by URL (https, s3://, gs://), tag and annotate them, search by
+  summary or metadata, fetch PDFs with local caching, and share collections
+  via asta:// URIs. Use when the user asks to save, find, or retrieve a
+  document "in Asta", references an asta:// URI, or wants to manage their
+  research library.
+triggers:
+  - "save this paper"
+  - "add to asta"
+  - "asta://"
+  - "my research library"
+  - "fetch that paper"
+  - "search my documents"
 ---
 
 # Asta Documents Management
 
-Use this skill when the user asks to store a document "in Asta" or retrieve "from Asta". Use it when the
-user references an "Asta document" or anything with an `asta://` URI.
+Manage a persistent local index of research papers, specs, and documents.
+Tag, annotate, search, fetch PDFs, and share collections via `asta://` URIs.
 
-This skill provides complete document management functionality for tracking research papers, documentation, and resources using the `asta-documents` CLI.
-
-**What it does:** Track document metadata (URLs, summaries, tags) in a local index. Think of it as a smart bookmark manager with powerful search capabilities.
+**Prerequisite:** Install the CLI:
+```bash
+uv tool install git+https://github.com/allenai/asta-resource-repo.git
+```
 
 ## Installation
 
